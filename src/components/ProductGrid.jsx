@@ -1,7 +1,7 @@
 import React from "react";
 
 export const ProductGrid = () => {
-    const products = [
+  const products = [
     { title: "Hazelnut Latte", price: "10.000", img: "/image 23.png" },
     { title: "Fried Chicken", price: "20.000", img: "/image 24.png" },
     { title: "Hazelnut Latte", price: "10.000", img: "/image 23.png" },
@@ -35,7 +35,10 @@ export const ProductGrid = () => {
                 You can explore the menu that we provide with fun and have their
                 own taste and make your day better.
               </p>
-              <img src="Frame 41.png" alt="" className="my-2" />
+              <div className="flex items-center">
+                <img src="Frame 41.png" alt="" className="my-2" />
+                <span className="relative left-[-5%]">5.0</span>
+              </div>
               <div className="flex items-center gap-2 mt-4">
                 <button className=" w-full rounded-lg bg-[#FF8906] p-1">
                   Buy

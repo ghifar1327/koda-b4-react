@@ -16,7 +16,7 @@ export default function ProductPage() {
               <img src="Frame 13.png" alt="" />
             </div>
             <div>Home</div>
-            <div>Produc</div>
+            <div>Product</div>
           </div>
           <div className="flex justify-between gap-10 items-center">
             <div>
