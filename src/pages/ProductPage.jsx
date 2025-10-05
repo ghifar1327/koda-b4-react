@@ -4,6 +4,7 @@ import { Footer } from "../components/Footer";
 import { ProductGrid } from "../components/ProductGrid";
 import { SideBar } from "../components/SideBar";
 import { PromoToday } from "../components/PromoToday";
+import { Link } from "react-router-dom";
 
 export default function ProductPage() {
   return (
@@ -15,8 +16,8 @@ export default function ProductPage() {
             <div>
               <img src="Frame 13.png" alt="" />
             </div>
-            <div>Home</div>
-            <div>Product</div>
+            <Link to="/">Home</Link>
+            <Link to='/ProductPage'>Product</Link>
           </div>
           <div className="flex justify-between gap-10 items-center">
             <div>

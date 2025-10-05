@@ -1,38 +1,10 @@
 import React from "react";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
+import data from "../data/allProduct.json"
 
 export const HomePage = () => {
-  const favoriteMenus = [
-    {
-      name: "Hazelnut Latte",
-      price: "IDR 25.000",
-      description:
-        "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-      img: "/image 21.png",
-    },
-    {
-      name: "Pinky Latte",
-      price: "IDR 22.000",
-      description:
-        "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-      img: "/image 22.png",
-    },
-    {
-      name: "Chicken Wings",
-      price: "IDR 30.000",
-      description:
-        "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-      img: "/image 23.png",
-    },
-    {
-      name: "Chappuchino",
-      price: "IDR 20.000",
-      description:
-        "You can explore the menu that we provide with fun and have their own taste and make your day better.",
-      img: "/image 24.png",
-    },
-  ];
+  const {FavoriteMenus} = data
 
   return (
     <>
@@ -192,7 +164,7 @@ export const HomePage = () => {
           </div>
 
           <div className="grid md:grid-cols-4 max-w-8xl mx-auto">
-            {favoriteMenus.map(({ name, price, description, img }, i) => (
+            {FavoriteMenus.map(({ name, price, description, img }, i) => (
               <div key={i} className="transition p-6 relative">
                 <div className="h-75">
                   <img
@@ -260,7 +232,6 @@ export const HomePage = () => {
           </div>
         </section>
 
-        {/* ================= Footer ================= */}
         <Footer></Footer>
       </main>
     </>

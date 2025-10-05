@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export const Footer = () => {
   return (
     <>
-    <footer className="bg-gray-100 py-10 px-6 mt-10">
+      <footer className="bg-gray-100 py-10 px-6 mt-10">
         <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
@@ -43,12 +43,12 @@ export const Footer = () => {
           {/* Social */}
           <div>
             <div className="font-semibold mb-5 ml-5">Social</div>
-            <div>
-              <img src="Frame 42.png" alt="" />
+            <div className="">
+              <img src="/Frame 42.png" alt="" />
             </div>
           </div>
         </div>
       </footer>
     </>
-  )
-}
+  );
+};

@@ -1,0 +1,66 @@
+{
+  "FavoriteMenus": [
+    {
+      "name": "Hazelnut Latte",
+      "price": "IDR 25.000",
+      "description": "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+      "img": "/image 24.png"
+    },
+    {
+      "name": "Pinky Latte",
+      "price": "IDR 22.000",
+      "description": "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+      "img": "/image 23.png"
+    },
+    {
+      "name": "Chicken Wings",
+      "price": "IDR 30.000",
+      "description": "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+      "img": "/image 24.png"
+    },
+    {
+      "name": "Chappuchino",
+      "price": "IDR 20.000",
+      "description": "You can explore the menu that we provide with fun and have their own taste and make your day better.",
+      "img": "/image 23.png"
+    }
+  ],
+  "AllMenus": [
+    {
+      "title": "Hazelnut Latte",
+      "price": "10.000",
+      "img": "/image 24.png",
+      "description": "You can explore the menu that we provide with fun and have their own taste and make your day better."
+    },
+    {
+      "title": "Fried Chicken",
+      "price": "20.000",
+      "img": "/image 23.png",
+      "description": "You can explore the menu that we provide with fun and have their own taste and make your day better."
+    },
+    {
+      "title": "Hazelnut Latte",
+      "price": "10.000",
+      "img": "/image 24.png",
+      "description": "You can explore the menu that we provide with fun and have their own taste and make your day better."
+    },
+    {
+      "title": "Fried Chicken",
+      "price": "20.000",
+      "img": "/image 23.png",
+      "description": "You can explore the menu that we provide with fun and have their own taste and make your day better."
+    },
+    {
+      "title": "Hazelnut Latte",
+      "price": "10.000",
+      "img": "/image 24.png",
+      "description": "You can explore the menu that we provide with fun and have their own taste and make your day better."
+    },
+    {
+      "title": "Fried Chicken",
+      "price": "20.000",
+      "img": "/image 23.png",
+      "description": "You can explore the menu that we provide with fun and have their own taste and make your day better."
+    }
+  ]
+}

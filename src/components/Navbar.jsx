@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -9,10 +10,10 @@ export const Navbar = () => {
             <div>
               <img src="Frame 13.png" alt="" />
             </div>
-            <div>Home</div>
-            <div>Produc</div>
+            <Link to='/'>Home</Link>
+            <Link to="/ProductPage">Product</Link>
           </div>
-          <div className="flex justify-between gap-10 items-center">
+          <div className="flex justify-between gap-10 items-center z-1">
             <div>
               <img src="/Search.png" alt="" />
             </div>
