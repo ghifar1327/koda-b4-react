@@ -1,10 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-export const Navbar = () => {
+export const Navbar2 = () => {
   return (
     <>
-      <nav className="absolute bg-[#0B090921] w-[100%] p-3 z-1">
+      <nav className="bg-black w-[100%] p-3 z-1">
         <div className=" flex justify-between items-center mx-20">
           <div className="flex justify-between gap-10 items-center text-white">
             <div>
@@ -30,5 +30,5 @@ export const Navbar = () => {
         </div>
       </nav>
     </>
-  );
-};
+  )
+}

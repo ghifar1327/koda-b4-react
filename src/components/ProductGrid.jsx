@@ -43,7 +43,7 @@ export const ProductGrid = () => {
                   Buy
                 </button>
                 <div>
-                  <img src="Frame 37.png" alt="" className="" />
+                  <img src="/Frame 37.png" alt="" className="" />
                 </div>
               </div>
             </div>

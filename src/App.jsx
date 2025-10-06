@@ -6,6 +6,7 @@ import { HomePage } from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ProductDetail } from "./pages/ProductDetail";
+import { PaymentDetail } from "./pages/PaymentDetail";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/Product/:title',
     element:<ProductDetail/>
+  },
+  {
+    path: '/payment',
+    element: <PaymentDetail/>
   }
 ])
 

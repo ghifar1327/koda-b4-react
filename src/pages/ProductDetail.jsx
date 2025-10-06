@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import data from "../data/allProduct.json";
-import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { Navbar2 } from "../components/Navbar2";
 
 export const ProductDetail = () => {
   const { title } = useParams();
+  const navigate = useNavigate();
   const { AllMenus } = data;
   const product = AllMenus.find((p) => p.title === title) || AllMenus[0];
 
@@ -14,7 +15,9 @@ export const ProductDetail = () => {
 
   return (
     <>
-      <Navbar />
+      <div>
+        <Navbar2 />
+      </div>
       <main className="font-sans bg-white text-gray-800">
         {/* ================= Product Detail Section ================= */}
         <section className="max-w-6xl mx-auto py-12 px-6">
@@ -22,9 +25,6 @@ export const ProductDetail = () => {
             {/* Left - Image Gallery */}
             <div>
               <div className="relative">
-                <span className="absolute top-3 left-3 bg-red-600 text-white text-xs px-3 py-1 rounded">
-                  FLASH SALE
-                </span>
                 <img
                   src={product.img}
                   alt={product.title}
@@ -39,7 +39,7 @@ export const ProductDetail = () => {
                     key={i}
                     src={product.img}
                     alt="gallery"
-                    className="w-full h-[80px] object-cover rounded-md cursor-pointer hover:opacity-80 transition"
+                    className="w-full h-full object-cover rounded-md cursor-pointer hover:opacity-80 transition"
                   />
                 ))}
               </div>
@@ -47,10 +47,16 @@ export const ProductDetail = () => {
 
             {/* Right - Product Info */}
             <div>
-              <h2 className="text-3xl font-bold mb-2">{product.title}</h2>
-              <p className="text-[#FF8906] font-semibold text-2xl mb-3">
-                Rp {product.price}
-              </p>
+              <span className=" bg-red-600 text-white text-xs px-3 py-1 rounded-xl ">
+                FLASH SALE
+              </span>
+              <h2 className="text-3xl font-bold my-2">{product.title}</h2>
+              <div className="flex items-center gap-5 mb-3">
+                <p className="text-[#D00000] line-through">IDR 20.000</p>
+                <p className="text-[#FF8906] font-semibold text-2xl">
+                  Rp {product.price}
+                </p>
+              </div>
 
               {/* Rating & Info */}
               <div className="flex items-center gap-3 mb-4">
@@ -58,9 +64,10 @@ export const ProductDetail = () => {
                 <span className="relative left-[-5%]">5.0</span>
               </div>
               <div className="flex gap-5 items-center my-5">
-                <span>200 Reviews</span>
+                <span>200+ Reviews</span>
                 <span className="text-gray-400">|</span>
                 <span className="text-gray-600 text-sm">Recommendation</span>
+                <img src="/ThumbsUp.png" alt="" />
               </div>
 
               {/* Description */}
@@ -108,7 +115,14 @@ export const ProductDetail = () => {
 
               {/* Buttons */}
               <div className="flex gap-4">
-                <button className="bg-[#FF8906] hover:bg-orange-600 text-white px-6 py-3 rounded-md font-semibold">
+                <button
+                  onClick={() =>
+                    navigate("/payment", {
+                      state: { product, size, qty },
+                    })
+                  }
+                  className="bg-[#FF8906] hover:bg-orange-600 text-white px-6 py-3 rounded-md font-semibold"
+                >
                   Buy Now
                 </button>
                 <button className="border-2 border-[#FF8906] text-[#FF8906] px-6 py-3 rounded-md font-semibold hover:bg-orange-50">
@@ -147,19 +161,29 @@ export const ProductDetail = () => {
                     Rp {item.price}
                   </p>
                   <img src="/Frame 41.png" alt="rating" className="w-20 mb-2" />
-                  <Link to={`/product/${encodeURIComponent(item.title)}`}>
-                    <button className="w-full bg-[#FF8906] text-white py-2 rounded-md hover:bg-orange-600">
+                  <div className="flex items-center gap-2 mt-4">
+                    <button
+                      onClick={() =>
+                        navigate("/payment", {
+                          state: { product: item, size: "Regular", qty: 1 },
+                        })
+                      }
+                      className="w-full bg-[#FF8906] text-white py-2 rounded-md hover:bg-orange-600"
+                    >
                       Buy
                     </button>
-                  </Link>
+                    <button>
+                      <img src="/Frame 37.png" alt="" />
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Pagination (dummy) */}
-          <div className="flex justify-center mt-10 gap-2">
-            {[1, 2, 3, 4].map((n) => (
+          <div className="flex justify-center items-center mt-10 gap-3">
+            {[1, 2, 3, 4, 5].map((n) => (
               <button
                 key={n}
                 className={`w-8 h-8 rounded-full ${
@@ -169,9 +193,12 @@ export const ProductDetail = () => {
                 {n}
               </button>
             ))}
+            <button className="bg-[#FF8906] p-1 rounded-[50%] relative">
+              <img src="/arrow-right.png" alt="" className="" />
+            </button>
           </div>
         </section>
-        <Footer/>
+        <Footer />
       </main>
     </>
   );
