@@ -3,10 +3,10 @@ import React from "react";
 export const Footer = () => {
   return (
     <>
-      <footer className="bg-gray-100 py-10 px-6 mt-10">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
+      <footer className="bg-gray-100 py-10 px-[15%] mt-10">
+        <div className="flex gap-10">
           {/* Brand */}
-          <div>
+          <div className="w-[25%]">
             <img src="Frame 27.png" alt="" />
             <p className="text-gray-600 mt-5 mb-5">
               Coffee Shop is a store that sells some good meals, and especially
@@ -18,7 +18,7 @@ export const Footer = () => {
           {/* Product */}
           <div>
             <h4 className="font-semibold">Product</h4>
-            <ul className="text-gray-600 mt-2 space-y-2">
+            <ul className="text-gray-600 mt-2 space-y-2 ">
               <li>OurProduct</li>
               <li>Pricing</li>
               <li>Locations</li>

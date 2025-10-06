@@ -2,6 +2,7 @@ import React from "react";
 import { Footer } from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import data from "../data/allProduct.json"
+import { ChatFeatur } from "../components/ChatFeatur";
 
 export const HomePage = () => {
   const {FavoriteMenus} = data
@@ -9,7 +10,7 @@ export const HomePage = () => {
   return (
     <>
       <Navbar />
-      <main className="font-sans bg-white text-gray-800">
+      <main className="font-sans text-gray-800">
         {/* ================= Hero Section ================= */}
         <div className="grid grid-cols-2 bg-gradient-to-r from-[#777C82] to-[#000000] h-[150vh] text-white">
           {/* Left Content */}
@@ -54,59 +55,9 @@ export const HomePage = () => {
               alt="Coffee"
               className="h-[150vh] w-full"
             />
-            <button className="absolute bg-[#FF8906] p-5 right-30 bottom-30 rounded-[50%]">
-              <img src="ChatCircleDots.png" alt="Chat Circle" />
-            </button>
-
-            <div
-              className="
-    absolute
-    bottom-[20%] right-[18%]
-    w-[60%] h-[50%]
-    bg-white
-    rounded-xl
-    border-t-[16px] border-[#FF8906]
-  "
-            >
-              {/* Header - Admin Info */}
-              <div className="flex items-center gap-5 p-3 pl-6">
-                <img src="Ellipse 183.png" alt="admin profile" />
-                <div>
-                  <div className="text-black font-semibold">Maria Angela</div>
-                  <div className="text-[#FF8906] text-sm">Admin Support</div>
-                </div>
-              </div>
-
-              {/* Garis pemisah */}
-              <div className="bg-[#E8E8E8] h-[1px]" />
-
-              {/* Pesan admin */}
-              <div className="flex items-center gap-4 m-4">
-                <img
-                  src="Ellipse 183.png"
-                  alt="admin profile"
-                  className="w-[10%] rounded-full"
-                />
-                <div className="bg-[#E8E8E84D] text-black rounded-lg p-2 text-lg">
-                  Hallo, ada yang bisa kami bantu?
-                </div>
-              </div>
-
-              {/* Balasan user */}
-              <div className="flex justify-end mr-5 mb-3 gap-2 items-center">
-                <div className="bg-[#E8E8E84D] text-black rounded-lg p-2 text-lg">
-                  Saya kesulitan mencari
-                </div>
-                <img
-                  src="Ellipse 184 (1).png"
-                  alt="user profile"
-                  className="w-10 h-10"
-                />
-              </div>
             </div>
-          </div>
         </div>
-
+        <ChatFeatur/>
         {/* ================= About Section ================= */}
         <section className="flex flex-col md:flex-row items-center mx-auto">
           {/* Text */}
